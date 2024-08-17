@@ -1,16 +1,20 @@
 {
-  "name": "uikit",
+  "name": "ui-kit-tailwind",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "prepare": "husky install",
     "dev": "vite --port 3000 --open",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "format": "prettier --write src",
-    "lint": "eslint src --ext .jsx,.js,.tsx,.ts  --no-error-on-unmatched-pattern --fix && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "test-all": "pnpm run check-format && pnpm run check-lint && pnpm run check-types"
   },
   "dependencies": {
     "@fontsource/roboto": "^5.0.13",
@@ -53,6 +57,7 @@
     "eslint-plugin-tailwindcss": "^3.17.4",
     "postcss": "^8.4.41",
     "prettier": "^3.3.3",
+    "husky": "^8.0.0",
     "sass": "^1.77.6",
     "storybook": "^8.2.2",
     "stylelint": "^16.6.1",
