@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button/button';
-import { Checkbox } from '@/components/ui/checkBox/checkBox';
+import { Button } from '@/components';
+import { FilterCheckBox } from '@/components/shared';
 
 function App() {
   return (
@@ -8,8 +8,8 @@ function App() {
       <div>
         <Button variant="outline">ui-kit button</Button>
       </div>
-      <div>
-        <Checkbox title="ui-kit checkbox"></Checkbox>
+      <div className="text-xs text-purple-700">
+        <FilterCheckBox text={'ui-kit checkBox'} value={'1'}></FilterCheckBox>
       </div>
     </>
   );

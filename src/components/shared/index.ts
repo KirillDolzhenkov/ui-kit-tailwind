@@ -1,1 +1,1 @@
-export { ButtonPrimary } from './buttonPrimary/buttonPrimary';
+export { FilterCheckBox } from './filterCheckBox/filterCheckBox';
