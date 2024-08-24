@@ -1,7 +1,7 @@
-import { useId } from 'react'
+import { useId } from 'react';
 
 export const useAutoId = (id?: string) => {
-  const generatedId = useId()
+  const generatedId = useId();
 
-  return id ?? generatedId
-}
+  return id ?? generatedId;
+};
