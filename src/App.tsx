@@ -1,6 +1,4 @@
-import { Button } from '@/components';
-import { FilterCheckBox } from '@/components/shared';
-
+import { Button, FilterCheckBox } from '@/components';
 function App() {
   return (
     <>
